@@ -7,7 +7,7 @@ ifeq ($(BOARD_SOC_TYPE),IMX50)
 include $(CLEAR_VARS)
 LOCAL_PREBUILT_LIBS := \
         lib/libc2d_z160.so \
-        lib/libgsl-fsl.so
+        lib/libgsl.so
 LOCAL_MODULE_TAGS := eng        
 include $(BUILD_MULTI_PREBUILT)
 
@@ -52,7 +52,7 @@ include $(CLEAR_VARS)
 LOCAL_PREBUILT_LIBS := \
 	lib/libc2d_z160.so \
 	lib/libc2d_z430.so \
-	lib/libgsl-fsl.so
+	lib/libgsl.so
 LOCAL_MODULE_TAGS := eng	
 include $(BUILD_MULTI_PREBUILT)
 

@@ -23,6 +23,8 @@ loglevel 3
     export SHM_MOUNTPOINT /mnt/shm
     export BOOTCLASSPATH /system/framework/core.jar:/system/framework/bouncycastle.jar:/system/framework/ext.jar:/system/framework/framework.jar:/system/framework/android.policy.jar:/system/framework/services.jar:/system/framework/core-junit.jar
 
+    export BACKLIGHT_PATH /sys/class/backlight/pwm-backlight/brightness
+    export MAX_BACKLIGHT_PATH /sys/class/backlight/pwm-backlight/max_brightness
     export LIGHTSENSOR_PATH /sys/class/i2c-adapter/i2c-1/1-0044
     export VPU_FW_PATH /system/lib/firmware/vpu
     export CODEC_SHM_PATH /mnt/shm
@@ -222,7 +224,7 @@ on boot
     setprop ro.EMPTY_APP_MEM 8192
 
 # Default backlight device
-    setprop hw.backlight.dev "pwm-backlight.0"
+    setprop hw.backlight.dev "pwm-backlight"
 
 # Write value must be consistent with the above properties.
 # Note that the driver only supports 6 slots, so we have combined some of
@@ -282,8 +284,8 @@ on boot
     chown root radio /proc/cmdline
 
 # Chmod/chown FSL specific sys entry
-    chown system system /sys/class/backlight/pwm-backlight.0/brightness
-    chmod 0660 /sys/class/backlight/pwm-backlight.0/brightness
+    chown system system /sys/class/backlight/pwm-backlight/brightness
+    chmod 0660 /sys/class/backlight/pwm-backlight/brightness
 
 
 # Define TCP buffer sizes for various networks

@@ -54,7 +54,7 @@ PREBUILT_FSL_IMX_OMX := true
 PREBUILT_FSL_IMX_GPU := true
 
 # for kernel/user space split
-TARGET_KERNEL_2G := true
+#TARGET_KERNEL_2G := true
 
 BOARD_RECOVERY_PARTITION_SIZE = 10M
 

@@ -6,7 +6,7 @@ on boot
     # 3D acceleration property
     setprop debug.sf.showfps    0
     setprop debug.sf.enable_hgl 1
-    setprop debug.egl.hw        1
+    setprop debug.egl.hw        0
 
     # fsl omx graphic manager media framework property
     setprop media.omxgm.enable-player 1
